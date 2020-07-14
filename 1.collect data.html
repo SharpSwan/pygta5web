@@ -3,55 +3,44 @@
 <head>
   <title>GTA5 파이썬으로 자율주행 AI 만들기 - Welcome</title>
   <meta charset="utf-8">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171867498-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-171867498-1');
-</script>
-
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1><a href="index.html">GTA5 파이썬으로 자율주행 AI 만들기</a></h1>
-  <ol>
-    <li><a href="1.collect data.html">데이터 수집</a></li>
-    <li><a href="2.train data.html">데이터 학습</a></li>
-    <li><a href="3.test data.html">데이터 테스트</a></li>
-  </ol>
-  <h2>데이터 수집</h2>
-  <p>
-    <div style="position: relative; height:0; padding-bottom: 56.25%;">
-    <iframe width="746" height="480" src="https://www.youtube.com/embed/Vzv2L9Jsqmo?list=PL7PA2uJEh2fNCfKvfEPbSt2m08KPd8b9a" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div></p>
-  <p><img src="gta5_self_driving.jpg" width="100%"></p>
-  <p>이 프로젝트는 게임 코드를 건드리지 않고 게임 화면을 실시간으로 가져와야합니다. 이 방법을 사용하기 위해선 opencv, pyautogui를 쓰는 방법등이 있는데 pywin32를 쓰는 것이 파이썬 이미지 라이브러리 위 방식들보다 낫습니다. 그러나 파이썬 이미지 라이브러리를 쓰고 싶다면 써도 됩니다.
-  </p>
-  <p>
-    <div id="disqus_thread"></div>
-    <script>
+  <div id="grid">
+    <ol>
+      <li><a href="1.collect data.html">데이터 수집</a></li>
+      <li><a href="2.train data.html">데이터 학습</a></li>
+      <li><a href="3.test data.html">데이터 테스트</a></li>
+    </ol>
+    <div id="article">
+      <h2>데이터 수집</h2>
+      <p><img src="gta5_self_driving.jpg" width="50%" height="50%"></p>
+      <p>이 프로젝트는 게임 코드를 건드리지 않고 게임 화면을 실시간으로 가져와야합니다. 이 방법을 사용하기 위해선 opencv, pyautogui를 쓰는 방법등이 있는데 pywin32를 쓰는 것이 파이썬 이미지 라이브러리 위 방식들보다 낫습니다. 그러나 파이썬 이미지 라이브러리를 쓰고 싶다면 써도 됩니다.
+      </p>
+  </div>
+</div>
+<div id="disqus_thread"></div>
+<script>
 
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://web1-v68avuoncz.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://web1-v68avuoncz.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-  </p>
-
+</p>
 </body>
 </html>

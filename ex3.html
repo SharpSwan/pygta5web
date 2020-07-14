@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <title>GTA5 파이썬으로 자율주행 AI 만들기 - 데이터 테스트</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .js {
+      font-weight: bold;
+      color:red;
+    }
+    #first {
+      color:green;
+    }
+    span {
+      color:blue;
+    }
+  </style>
+</head>
+<body>
+  <h1><a href="index.html">GTA5 파이썬으로 자율주행 AI 만들기</a></h1>
+      <h2 style="background-color: coral; color:powderblue">데이터 테스트</h2>
+      <p><img src="gta5_self_driving.jpg" width="50%" height="50%"></p>
+
+      <h2>1. 특징</h2><p>
+      이 모델에서는 <span>key label 을 9개로 나누어서 data collection</span>을 합니다.  object detection은 하지 않았으며 온전히 <span>image를 input으로 하여 key 값을 output으로 출력</span>합니다. <span id="first" class="js">GTA5</span>가 아니더라도 화면을 보고 key 값을 입력하는 다른 것에도 충분히 적용 가능하다고 생각합니다. 그러나 아무래도 image 하나만을 가지고 완벽한 판단을 하는 것은 무리가 있다고 판단됩니다. </p><p>
+      <h2>2. 문제점</h2>
+      <span class="js">GTA5</span>에서의 운전을 생각해보면 당연히도 straight가 가장 많을 수 밖에 없습니다. straight 명령의 갯수는 다른 명령과 100k 개 이상 차이가 나기도 합니다. 이 방식의 한계는 밸런싱은 되어있으나 차량을 피하거나 하는 다양한 상황에서의 대처가 잘될 때와 안될 때의 차이가 심합니다. 그 이유로는 <span>minority classess 를 duplicate하여 over-sampling</span> 했기 때문에 다양한 상황에서의 data를 가지지 못한 것이 그 이유라고 생각합니다.</p><p>
+      <h2>3. 발전 방법</h2>
+      위 문제의 해결을 위해선 다양한 상황의 좌회전, 우회전, 감속 데이터 등이 필요하나, 현실적으로 100k 개의 foward_right, foward_left 등을 모으기 위해서는 상당한 시간과 저장 용량 등이 필요하게 됩니다. 저의 계산으로는 대략 3T 정도의 저장장치 및 2,000시간이라는 계산이 나왔습니다. 코드를 이용해 straight data의 collect 숫자를 제한하여 용량 문제를 해결하는 방법은 생각했으나, 시간을 줄일 해결 방법이 없었습니다. <span>충분한 시간이 있다면 over-sampling보다 under-sampling</span>방법을 사용하여 밸런싱한다면 더 좋은 성능을 보여줄 것 같습니다. 1인 프로젝트로 해결하기에는 시간이 너무 많이 필요하기에 여기서  프로젝트를 종료하려 합니다.</p>
+  </div>
+</div>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://web1-v68avuoncz.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</p>
+</body>
+</html>
