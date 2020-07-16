@@ -4,38 +4,12 @@
   <title>GTA5 파이썬으로 자율주행 AI 만들기 - 데이터 테스트</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
-  <script>
-    function nightDayHandler(self){
-      var target = document.querySelector('body');
-      if(self.value ==='다크모드 ON'){
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
-        self.value = '일반모드 ON';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-          alist[i].style.color = 'powderblue';
-          i = i + 1;
-        }
-      } else {
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
-        self.value ='다크모드 ON';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-          alist[i].style.color = 'blue';
-          i = i + 1;
-        }
-      }
-    }
-  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="colors.js"></script>
 </head>
 <body>
   <h1><a href="index.html">GTA5 파이썬으로 자율주행 AI 만들기</a></h1>
-  <input type="button" value="다크모드 ON" onclick="
+  <input id = "night_day" type="button" value="다크모드 ON" onclick="
     nightDayHandler(this);
   ">
   <div id="grid">

@@ -4,9 +4,14 @@
   <title>GTA5 파이썬으로 자율주행 AI 만들기 - 데이터 학습</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="colors.js"></script>
 </head>
 <body>
   <h1><a href="index.html">GTA5 파이썬으로 자율주행 AI 만들기</a></h1>
+  <input id = "night_day" type="button" value="다크모드 ON" onclick="
+    nightDayHandler(this);
+  ">
   <div id="grid">
     <ol>
       <li><a href="1.collect data.html">데이터 수집</a></li>
